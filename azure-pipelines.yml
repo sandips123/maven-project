@@ -25,4 +25,8 @@ steps:
     Dockerfile: '**/Dockerfile'
     tags: 'v1.0'
 
-  
+ - task: KubernetesManifest@0
+   inputs:
+     action: 'deploy'
+     kubernetesServiceConnection: 'aksconnect'
+     manifests: 'kubernetes_deployment_service.yml'
