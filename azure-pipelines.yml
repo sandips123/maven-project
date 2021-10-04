@@ -25,7 +25,7 @@ steps:
     Dockerfile: '**/Dockerfile'
     tags: '- task: KubernetesManifest@0
   inputs:
-    action: 'deploy to AKS'
+    action: 'deploy'
     kubernetesServiceConnection: 'aksconnect'
     manifests: 'kubernetes_deployment_service.yml'0'
     publishJUnitResults: true
