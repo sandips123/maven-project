@@ -28,7 +28,7 @@ steps:
   inputs:
     action: 'deploy'
     kubernetesServiceConnection: 'aksconnect'
-    manifests: '"**/kubernetes_deployment_service.yml"'
+    manifests: '**/kubernetes_deployment_service.yml'
     
     
 
