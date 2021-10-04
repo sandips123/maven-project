@@ -23,7 +23,11 @@ steps:
     repository: 'javahelloworrld'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: 'v1.0'
+    tags: '- task: KubernetesManifest@0
+  inputs:
+    action: 'deploy to AKS'
+    kubernetesServiceConnection: 'aksconnect'
+    manifests: 'kubernetes_deployment_service.yml'0'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
