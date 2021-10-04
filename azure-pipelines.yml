@@ -23,5 +23,6 @@ steps:
     repository: 'javahelloworrld'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: '- task: KubernetesManifest@0
+    tags: 'v1.0'
+
   
