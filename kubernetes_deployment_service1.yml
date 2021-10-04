@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: tomcat-deployment
+  name: tomcat-deployment1
 spec:
   selector:
     matchLabels:
-      app: tomcat
-      tier: frontend
+      app: tomcat1
+      tier: frontend1
   replicas: 2 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app: tomcat
-        tier: frontend
+        app: tomcat1
+        tier: frontend1
     spec:
       containers:
         - name: mytomcat
@@ -24,11 +24,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: tomcat-service
+  name: tomcat-service1
 spec:
   selector:
-    app: tomcat
-    tier: frontend  
+    app: tomcat1
+    tier: frontend1 
   ports:
     - port: 8080
   type: LoadBalancer 
