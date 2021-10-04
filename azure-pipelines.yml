@@ -17,6 +17,13 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'azurek8s'
+    repository: 'javahelloworrld'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+    tags: 'v1.0'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
